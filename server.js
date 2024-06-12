@@ -16,8 +16,10 @@ app.engine(
     // // layoutsDir: "views/layouts",
   })
 );
+
 app.set("view engine", "handlebars");
-console.log("directory", __dirname);
+app.use(express.static(path.join(__dirname, "public")));
+console.log("directory", path.join(__dirname, "public"));
 // app.set("views", path.join(__dirname, "/views"));
 app.set("views", "./views");
 
