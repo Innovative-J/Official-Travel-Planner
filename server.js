@@ -1,12 +1,23 @@
 const express = require("express");
+const session = require("express-session");
 const exphbs = require("express-handlebars");
 const path = require("path");
 
 const routes = require("./controllers");
+const sequelize = require("./config/connection");
 
 const app = express();
 const port = 3000;
 const hbs = exphbs.create({});
+
+// session setup
+const sess = {
+  secret: "User data",
+  resave: false,
+  saveUninitialized: false,
+};
+
+app.use(session(sess));
 
 app.engine("handlebars", hbs.engine);
 
