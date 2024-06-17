@@ -1,0 +1,55 @@
+{{! navbar  }}
+<section  class="has-background-warning-light ">
+
+{{> navbar}}
+
+{{! cards, use columns and then use size classes to align cards}}
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <!-- Card 1 -->
+      <div class="column is-one-quarter">
+        {{!-- change link to proper page --}}
+        <a href="http://localhost/example">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img
+                src="/images/waitingFlight.jpg"
+                alt="Person waiting for flight"
+              />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h1 class="has-text-info">Click here to plan your flights!</h1>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <!-- Card 2 -->
+      <div class="column is-one-quarter">
+        {{!-- change link to proper page --}}
+        <a href="http://bookings">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="/images/ToDo-list.jpg" alt="To do list" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h1 class="has-text-info">Click here to start your Itinerary</h1>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+{{!-- footer --}}
+{{>footer}}
