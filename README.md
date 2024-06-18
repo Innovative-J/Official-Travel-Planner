@@ -52,7 +52,6 @@ npm install
 - Handlebars.js
 - Express-session
 - Bulma CSS (for styling)
-  <!-- -google maps incorporate others as well that will help  -->
   -google maps
 
 ## License
