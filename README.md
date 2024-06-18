@@ -15,9 +15,6 @@ Travel Planner is a full-stack web application designed to help users plan their
 7. [Technologies](#Technologies)
 
 ## Installation
-
-<!-- juan will add more context -->
-
 npm install
 
 ## Usage
