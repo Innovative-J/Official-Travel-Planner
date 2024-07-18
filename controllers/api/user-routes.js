@@ -27,25 +27,18 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Login
+// Login route
 router.post('/login', async (req, res) => {
   try {
+    // Find a user in the database with the provided email
     const dbUserData = await User.findOne({
       where: {
         email: req.body.email,
       },
     });
 
+    // If no user is found with that email, send a 400 status and an error message
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
-      return;
-    }
-
-    const validPassword = await dbUserData.checkPassword(req.body.password);
-
-    if (!validPassword) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password. Please try again!' });
