@@ -61,16 +61,18 @@ router.post('/login', async (req, res) => {
 }
 });
 
-// Logout
+// Logout route
 router.post('/logout', (req, res) => {
-  // When the user logs out, destroy the session
+  // If the user is logged in, destroy the session
   if (req.session.loggedIn) {
     req.session.destroy(() => {
+      // Send a 204 status to indicate the session was successfully destroyed
       res.status(204).end();
     });
   } else {
+    // If the user is not logged in, send a 404 status
     res.status(404).end();
   }
 });
 
-module.exports = router;
+module.exports = router; // Export the router to be used in other parts of the application
