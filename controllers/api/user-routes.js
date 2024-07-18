@@ -45,18 +45,20 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // Once the user successfully logs in, set up the sessions variable 'loggedIn'
-    req.session.save(() => {
-      req.session.loggedIn = true;
+   // Once the user successfully logs in, set up the session variable 'loggedIn'
+   req.session.save(() => {
+    req.session.loggedIn = true;
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+    // Send a 200 status with the user data and a success message
+    res
+      .status(200)
+      .json({ user: dbUserData, message: 'You are now logged in!' });
+  });
+} catch (err) {
+  // Log any errors to the console and send a 500 status with the error
+  console.log(err);
+  res.status(500).json(err);
+}
 });
 
 // Logout
