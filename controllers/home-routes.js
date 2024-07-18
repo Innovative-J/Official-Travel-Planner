@@ -1,12 +1,13 @@
-const router = require("express").Router();
+const router = require("express").Router(); // Import the Express Router
 
 // Login route
 router.get("/", (req, res) => {
   // If the user is already logged in, redirect to the homepage
-  if (req.session.loggedIn){
+  if (req.session.loggedIn) {
     res.redirect('/');
+    return;
   }
-  // Otherwise, render the 'login' template
+  // Otherwise, render the 'homepage' template
   res.render("homepage");
 });
 
