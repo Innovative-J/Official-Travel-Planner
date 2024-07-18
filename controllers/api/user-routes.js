@@ -12,20 +12,17 @@ router.post('/', async (req, res) => {
     });
 
 
+    // If the user is successfully created, attempt to create a new booking associated with the username
     const dbBookingData = await Booking.create({
-      id: username,
+      id: username, // Assuming 'username' should be a variable; if it's meant to be 'req.body.username', change accordingly
       flights: req.body.flights,
       itinerary: req.body.itinerary,
-    })
-
-    // Set up sessions with a 'loggedIn' variable set to `true`
-    req.session.save(() => {
-      req.session.loggedIn = true;
-
-      res.status(200).json(dbUserData);
     });
+
+    // Send a response with the created user and booking data
+    res.status(200).json({ dbUserData, dbBookingData });
   } catch (err) {
-    console.log(err);
+    // If there's an error, send a response with the error message
     res.status(500).json(err);
   }
 });
