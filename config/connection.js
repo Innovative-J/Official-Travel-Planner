@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-require('dotenv').config();
+const Sequelize = require('sequelize'); // Import the Sequelize library
+require('dotenv').config(); // Load environment variables from a .env file
 
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL)
