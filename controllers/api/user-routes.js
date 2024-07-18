@@ -1,14 +1,16 @@
-const router = require('express').Router();
-const { User } = require('../../models');
+const router = require('express').Router(); // Import the Express Router
+const { User } = require('../../models'); // Import the User model from the models directory
 
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
+    // Attempt to create a new user in the database with the provided username, email, and password
     const dbUserData = await User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
     });
+
 
     const dbBookingData = await Booking.create({
       id: username,
