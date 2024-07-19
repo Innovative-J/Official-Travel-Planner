@@ -38,4 +38,4 @@ Booking.init(
   }
 );
 
-module.exports = User;
+module.exports = Booking; // Export the Booking model for use in other parts of the application
