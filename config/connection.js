@@ -14,4 +14,4 @@ const sequelize = process.env.DB_URL
     }
   );
 
-module.exports = sequelize;
+  module.exports = sequelize; // Export the Sequelize instance for use in other parts of the application
