@@ -5,7 +5,7 @@ require('dotenv').config(); // Load environment variables from a .env file
 const sequelize = process.env.DB_URL
 ? new Sequelize(process.env.DB_URL) // If DB_URL is defined, use it to connect
 : new Sequelize( // Otherwise, use individual database parameters from environment variables
-    process.env.DB_NAME,
+  process.env.DB_NAME, // Database name
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
