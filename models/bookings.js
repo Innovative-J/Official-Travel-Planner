@@ -1,6 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+const { Model, DataTypes } = require("sequelize"); // Import Sequelize's Model and DataTypes
+const bcrypt = require("bcrypt"); // Import bcrypt for password hashing
+const sequelize = require("../config/connection"); // Import the Sequelize connection instance
+
 
 class Booking extends Model {}
 
