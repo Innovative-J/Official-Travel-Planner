@@ -10,10 +10,11 @@ class Booking extends Model {}
 Booking.init(
   {
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-        },
+      type: DataTypes.INTEGER, // Define the id attribute as an integer
+      allowNull: false, // The id cannot be null
+      primaryKey: true, // Set id as the primary key
+    },
+
     flights: {
       type: DataTypes.STRING,
       allowNull: false,
