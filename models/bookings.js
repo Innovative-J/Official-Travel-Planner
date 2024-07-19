@@ -20,11 +20,11 @@ Booking.init(
       allowNull: false, // The flights attribute cannot be null
     },
     itinerary: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+      type: DataTypes.STRING, // Define the itinerary attribute as a string
+      allowNull: false, // The itinerary attribute cannot be null
+      unique: true, // Ensure the itinerary is unique
       validate: {
-        isEmail: true,
+        isEmail: true, // Validate that the itinerary is in email format (this might need to be adjusted based on actual requirements)
       },
     },
   },
