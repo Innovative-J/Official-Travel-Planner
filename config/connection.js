@@ -7,7 +7,7 @@ const sequelize = process.env.DB_URL
 : new Sequelize( // Otherwise, use individual database parameters from environment variables
   process.env.DB_NAME, // Database name
   process.env.DB_USER, // Database user
-    process.env.DB_PASSWORD,
+  process.env.DB_PASSWORD, // Database password
     {
       host: 'localhost',
       dialect: 'postgres',
