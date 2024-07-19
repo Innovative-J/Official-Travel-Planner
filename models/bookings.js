@@ -29,12 +29,12 @@ Booking.init(
     },
   },
   {
-    hooks: {},
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "user",
+    hooks: {}, // Define any model hooks (none in this case)
+    sequelize, // Pass the Sequelize connection instance
+    timestamps: false, // Disable timestamps
+    freezeTableName: true, // Prevent Sequelize from pluralizing the model name
+    underscored: true, // Use underscores instead of camel-casing
+    modelName: "booking", // Set the model name to 'booking'
   }
 );
 
