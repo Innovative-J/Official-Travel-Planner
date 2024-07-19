@@ -3,11 +3,15 @@ const bcrypt = require('bcrypt'); // Import bcrypt for password hashing
 const sequelize = require('../config/connection'); // Import the Sequelize connection instance
 
 
+
+// Define the User model extending Sequelize's Model
 class User extends Model {
+  // Method to check if the provided password matches the stored hashed password
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+
 
 User.init(
   {
