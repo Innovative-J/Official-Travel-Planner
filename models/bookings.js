@@ -16,8 +16,8 @@ Booking.init(
     },
 
     flights: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.STRING, // Define the flights attribute as a string
+      allowNull: false, // The flights attribute cannot be null
     },
     itinerary: {
       type: DataTypes.STRING,
