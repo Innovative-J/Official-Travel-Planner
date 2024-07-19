@@ -13,13 +13,14 @@ class User extends Model {
 }
 
 
+// Initialize the User model with its attributes and options
 User.init(
   {
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      type: DataTypes.INTEGER, // Define the id attribute as an integer
+      allowNull: false, // The id cannot be null
+      primaryKey: true, // Set id as the primary key
+      autoIncrement: true, // Enable auto-increment for the id
     },
     username: {
       type: DataTypes.STRING,
